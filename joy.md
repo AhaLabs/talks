@@ -30,6 +30,10 @@ A fast-paced "live coding" session.
 
 ---
 
+![bg contain](joy/jesus.gif)
+
+---
+
 ![bg](joy/inside-out-joy.webp)
 
 ---
