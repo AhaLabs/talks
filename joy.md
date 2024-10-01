@@ -3,6 +3,14 @@ headingDivider: 1
 style: |
   section {
     justify-content: flex-start;
+    font-size: 2.5em;
+  }
+  section.joy a,
+  section.joy h1 {
+    color: rgb(93, 74, 93);
+  }
+  section.joy a {
+    text-decoration: underline;
   }
 ---
 
@@ -12,10 +20,94 @@ A fast-paced "live coding" session.
 
 <!-- Original submitted talk description: Crack open your laptop and follow along with this fast-paced live coding session. We'll use Stellar CLI to initialize a new dapp, take a look at the contracts, and quickly move onto building out our frontend app. We'll switch back and forth between tweaking the contracts and the frontend, helping you solidify your mental model of how it all fits together. We'll also look at how to build against a contract you didn't author, integrating it into your frontend toolset as easily as your own contracts. -->
 
-# get it
+---
 
-first [rust](https://developers.stellar.org/docs/build/smart-contracts/getting-started/setup#install-rust), then
+![bg](joy/pattern-letters.webp)
 
+# : j o y :
+
+# 😂 
+
+---
+
+![bg](joy/inside-out-joy.webp)
+
+---
+
+![bg](joy/jumping.jpg)
+
+---
+
+![bg](joy/mindful-breath.jpeg)
+
+---
+
+![bg](joy/mountaintop.jpeg)
+
+---
+
+![bg](joy/swing.webp)
+
+---
+
+![bg](joy/chatgpt.webp)
+
+
+<!-- Why lens flares, I asked. "Lens flares are often associated with joy because they evoke the brightness and energy of sunlight, which is commonly linked to positive emotions like warmth, happiness, and freedom. Visually, lens flares can create a sense of liveliness and motion in an image, enhancing the dynamic quality of the scene. When used in moments that feature bright sunlight, the effect can highlight the carefree, radiant feeling often associated with joyful experiences, like playing outdoors, celebrations, or simply basking in a beautiful day." -->
+
+---
+
+![bg](joy/raincoat-smile.png)
+
+# joy
+
+_noun_
+
+- Intense and especially ecstatic or exultant happiness, or an instance of such feeling.
+
+# joy
+
+_noun_
+
+- Intense and especially ecstatic or exultant happiness, or an instance of such feeling.
+
+&nbsp;
+
+&nbsp;
+
+The American Heritage® Dictionary of the English Language, 5th Edition
+
+# joy
+
+_according to Merriam-Webster_
+
+* the emotion evoked by well-being, success, or good fortune
+
+# joy
+
+_according to Merriam-Webster_
+
+- the emotion evoked by well-being, success, or good fortune or by the prospect of possessing what one desires
+
+# joy
+
+_according to Merriam-Webster_
+
+- the emotion evoked by well-being, success, or good fortune or by the prospect of possessing what one desires, _delight_
+* a source or cause of delight
+
+
+# stellar
+
+<!--
+backgroundImage: "url(./joy/bg.webp)"
+class: joy
+-->
+
+
+# stellar-cli
+
+* install [rust](https://developers.stellar.org/docs/build/smart-contracts/getting-started/setup#install-rust), then
 * `cargo install cargo-binstall`
 * `cargo binstall stellar-cli`
 
@@ -56,12 +148,16 @@ Network {
 
 # getHealth
 
-save it 😱
+<!--
+_backgroundImage: none
+_class: ohno
+-->
+
 
 * `curl -s -X POST "http://localhost:8000/soroban/rpc" -H "Content-Type: application/json" -d '{ "jsonrpc": "2.0", "id": 8675309, "method": "getHealth" }' | sed 's/.*"status":"\([^"]*\)".*/\1/'`
 * if `healthy`, it's ready!
 
-<!-- no joy here -->
+<!-- no joy here. save it! -->
 
 # keys
 
@@ -79,6 +175,11 @@ save it 😱
 - `stellar...`
 
 # send tokens??
+
+<!--
+_backgroundImage: none
+_class: ohno
+-->
 
 - `stellar keys generate bob`
 - `stellar...`
