@@ -28,36 +28,50 @@ A fast-paced "live coding" session.
 
 # 😂 
 
+<!-- this always seemed TOO happy to mean "joy" to me! -->
+
 ---
 
 ![bg contain](joy/jesus.gif)
+
+<!-- as an evangelical kid, I was taught that joy came from putting jesus first! and that it wasn't an extreme happiness, but a more foundational state of mind / orientation toward the world / aspect of character -->
 
 ---
 
 ![bg](joy/inside-out-joy.webp)
 
+<!-- if you search for images of joy, you get a LOT of Inside Out -->
+
 ---
 
 ![bg](joy/jumping.jpg)
+
+<!-- and also a lot of lens flare -->
 
 ---
 
 ![bg](joy/mindful-breath.jpeg)
 
+<!-- like, a lot -->
+
 ---
 
 ![bg](joy/mountaintop.jpeg)
 
+<!-- so much -->
+
 ---
 
 ![bg](joy/swing.webp)
+
+<!-- on and on -->
 
 ---
 
 ![bg](joy/chatgpt.webp)
 
 
-<!-- Why lens flares, I asked. "Lens flares are often associated with joy because they evoke the brightness and energy of sunlight, which is commonly linked to positive emotions like warmth, happiness, and freedom. Visually, lens flares can create a sense of liveliness and motion in an image, enhancing the dynamic quality of the scene. When used in moments that feature bright sunlight, the effect can highlight the carefree, radiant feeling often associated with joyful experiences, like playing outdoors, celebrations, or simply basking in a beautiful day." -->
+<!-- ChatGPT will give you lens flares, too. Why lens flares, I asked. "Lens flares are often associated with joy because they evoke the brightness and energy of sunlight, which is commonly linked to positive emotions like warmth, happiness, and freedom. Visually, lens flares can create a sense of liveliness and motion in an image, enhancing the dynamic quality of the scene. When used in moments that feature bright sunlight, the effect can highlight the carefree, radiant feeling often associated with joyful experiences, like playing outdoors, celebrations, or simply basking in a beautiful day." -->
 
 ---
 
@@ -107,6 +121,8 @@ _according to Merriam-Webster_
 backgroundImage: "url(./joy/bg.webp)"
 class: joy
 -->
+
+<!-- joy is the default! i'll mark parts of the developer journey that lack joy -->
 
 
 # stellar-cli
