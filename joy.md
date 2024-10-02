@@ -1,24 +1,42 @@
 ---
-headingDivider: 1
+headingDivider: 2
 style: |
   section {
-    justify-content: flex-start;
-    font-size: 2.5em;
+    font-size: 2.4em;
   }
-  section.joy a,
-  section.joy h1 {
+  section h2,
+  section h1 {
     color: rgb(93, 74, 93);
+    text-align: center;
   }
-  section.joy a {
-    text-decoration: underline;
+  section.top {
+    justify-content: flex-start;
+  }
+  section.top h2,
+  section.top h1 {
+    text-align: left;
   }
 ---
 
 # How Stellar's dApp Tooling Optimizes for Joy
 
-A fast-paced "live coding" session.
+# me
 
-<!-- Original submitted talk description: Crack open your laptop and follow along with this fast-paced live coding session. We'll use Stellar CLI to initialize a new dapp, take a look at the contracts, and quickly move onto building out our frontend app. We'll switch back and forth between tweaking the contracts and the frontend, helping you solidify your mental model of how it all fits together. We'll also look at how to build against a contract you didn't author, integrating it into your frontend toolset as easily as your own contracts. -->
+![bg right](joy/chadoh.jpg)
+
+* Chad O
+  * (chadoh)
+* Cofounder, Aha Labs
+  * (and CEO?)
+* prev
+  * Ruby (on Rails)
+  * NEAR
+
+# How Stellar's dApp Tooling Optimizes for Joy
+
+# How Stellar's (dApp) Tooling Optimizes for Joy
+
+# How Stellar('s (dApp) Tooling) Optimizes for Joy
 
 ---
 
@@ -26,7 +44,7 @@ A fast-paced "live coding" session.
 
 # : j o y :
 
-# 😂 
+# 😂
 
 <!-- this always seemed TOO happy to mean "joy" to me! -->
 
@@ -79,17 +97,12 @@ A fast-paced "live coding" session.
 
 # joy
 
-_noun_
-
-- Intense and especially ecstatic or exultant happiness, or an instance of such feeling.
-
-# joy
+<!-- class: top -->
 
 _noun_
 
 - Intense and especially ecstatic or exultant happiness, or an instance of such feeling.
-
-&nbsp;
+* 😂
 
 &nbsp;
 
@@ -113,102 +126,181 @@ _according to Merriam-Webster_
 
 - the emotion evoked by well-being, success, or good fortune or by the prospect of possessing what one desires, _delight_
 * a source or cause of delight
-
+* ![w:300](joy/raincoat-smile.png)
 
 # stellar
+
+<!--
+backgroundImage: "url(./joy/bg.png)"
+class: none
+-->
+
+1) real value, real utility
+2) built in programmability
+   * command line example
+   * app example
+3) familiar developer workflows
+4) fast project setup
+5) you
+
+
+# 1. real value, real utility
+
+# blockchains
+
+# are they useful?
+
+# what are they good for?
+
+<!--
+so many misguided thoughts on this!
+
+- will end poverty!
+- will end corruption!
+- will create world peace!
+
+-->
+
+# as with data,<br/>so with value
+
+# prev 30 years: info<br />&nbsp;
+
+# prev 30 years: info<br />next 30 years: value
+
+# prev 30 years: info<br />next 30 years: value
+
+<!-- _backgroundImage: none -->
+
+# real-world utility
+
+<!--
+not just "money games for rich people"
+
+MoneyGram, UN, etc. Actual people, real use-cases.
+
+If "programmable money" is the argument that makes sense of blockchain, then it helps to have real money in the system.
+-->
+
+# Stellar Asset Contract
+
+# ~~1. real value, real utility~~
+
+# 2. built in programmability
+
+# &nbsp;
+
+<!-- backgroundImage: none -->
+
+# ABIs
+
+# ABIs published to...
+
+# ABIs published to... ???
+
+# Etherscan API
+
+# bake it in
+
+<!-- backgroundImage: url(joy/bg.png) -->
+
+# "contract spec"
+
+# XDR
+
+<!-- backgroundImage: none -->
+
+# "XDR spec"
+
+# "XDR"
+
+# "contract XDR spec"
+
+# "contract interface"
+
+# really slick developer tools
+
+<!-- backgroundImage: url(joy/bg.png) -->
+
+## command line interface
+
+<!-- class: top -->
+
+* `stellar contract deploy ... --alias wow`
+* `stellar contract invoke --id wow -- --help`
+
+## command line interface
+
+- `stellar contract deploy ... --alias wow`
+- `stellar contract invoke --id wow -- --help`
+
+```
+transfer        Transfer `amount` from `from` to `to`.
+
+                # Arguments
+
+                * `from` - The address holding the balance of tokens which will be
+                withdrawn from.
+                * `to` - The address which will receive the transferred tokens.
+                * `amount` - The amount of tokens to be transferred.
+```
+
+## command line interface
+
+- `stellar contract deploy ... --alias wow`
+- `stellar contract invoke --id wow -- --help`
+- `stellar contract invoke --id wow -- transfer --help`
+
+## command line interface
+
+- `stellar contract deploy ... --alias wow`
+- `stellar contract invoke --id wow -- --help`
+- `stellar contract invoke --id wow -- transfer --help`
+
+```
+Usage: transfer [OPTIONS]
+Options:
+      --amount <i128>
+          Example:
+            --amount -100
+      --to <Address>
+          Can be public key (G13..), a contract hash (6c45307), or an identity (alice)
+          Example:
+            --to GDIY6AQQ75WMD4W46EYB7O6UYMHOCGQHLAQGQTKHDX4J2DYQCHVCR4W4
+      --from <Address>
+          Can be public key (G13..), a contract hash (6c45307) or an identity (alice),
+          Example:
+            --from GDIY6AQQ75WMD4W46EYB7O6UYMHOCGQHLAQGQTKHDX4J2DYQCHVCR4W4
+```
+
+## command line interface
+
+- `stellar contract deploy ... --alias wow`
+- `stellar contract invoke --id wow -- --help`
+- `stellar contract invoke --id wow -- transfer --help`
+- `stellar contract invoke --id wow -- transfer`<br /> `--from alice --to bob --amount 10000000`
+
+## javascript
+
+- `import { contract } from '@stellar/stellar-sdk'`
+- `client = contract.Client.from({ contractId: 'C…' })`
+- `client.transfer({`<br/>`  from: alice,`<br/>`  to: bob,`<br />`  amount: 10000000,`<br />`})`
+
+## typescript
+
+<!--
+3) `network container` (no Ganache or whatever)
+   * snapshotting
+   * local development
+   * controlled environment for tests
+   * in the future: UI
+4) stellar contract init
+5) cta
+   * don't just build apps, build tooling!
+   * foundations (technical, financial, & community) are there
+     * there's a dev tooling track on SCF
+   * if you've got ideas, build on Stellar!
 
 <!--
 backgroundImage: "url(./joy/bg.webp)"
 class: joy
 -->
-
-<!-- joy is the default! i'll mark parts of the developer journey that lack joy -->
-
-
-# stellar-cli
-
-* install [rust](https://developers.stellar.org/docs/build/smart-contracts/getting-started/setup#install-rust), then
-* `cargo install cargo-binstall`
-* `cargo binstall stellar-cli`
-
-# short help
-
-the default
-
-* `stellar`
-* `stellar -h`
-
-# long help
-
-is long
-
-* `stellar --help`
-* `stellar --help | less`
-
-# network
-
-* `stellar network container start local`
-* `stellar network container logs local`
-* `stellar network ls -l`
-
-# network
-
-- `stellar network container start local`
-- `stellar network container logs local`
-- `stellar network ls -l`
-
-```
-Default
-Name: local
-Network {
-    rpc_url: "http://localhost:8000/rpc",
-    network_passphrase: "Standalone Network ; February 2017",
-}
-```
-
-# getHealth
-
-<!--
-_backgroundImage: none
-_class: ohno
--->
-
-
-* `curl -s -X POST "http://localhost:8000/soroban/rpc" -H "Content-Type: application/json" -d '{ "jsonrpc": "2.0", "id": 8675309, "method": "getHealth" }' | sed 's/.*"status":"\([^"]*\)".*/\1/'`
-* if `healthy`, it's ready!
-
-<!-- no joy here. save it! -->
-
-# keys
-
-* `stellar keys generate alice`
-* `stellar keys fund alice`
-
-# send tokens
-
-* `stellar keys generate bob`
-* `stellar`
-
-# send tokens
-
-- `stellar keys generate bob`
-- `stellar...`
-
-# send tokens??
-
-<!--
-_backgroundImage: none
-_class: ohno
--->
-
-- `stellar keys generate bob`
-- `stellar...`
-
-# contract
-
-* `stellar contract id asset`
-* `stellar contract init`
-* `stellar contract build`
-* `stellar contract deploy`
-* `stellar contract invoke`
-* `stellar contract bindings`
