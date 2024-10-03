@@ -287,20 +287,57 @@ Options:
 
 ## typescript
 
-<!--
-3) `network container` (no Ganache or whatever)
-   * snapshotting
-   * local development
-   * controlled environment for tests
-   * in the future: UI
-4) stellar contract init
-5) cta
-   * don't just build apps, build tooling!
-   * foundations (technical, financial, & community) are there
-     * there's a dev tooling track on SCF
-   * if you've got ideas, build on Stellar!
+* `stellar contract bindings typescript --id C…`<br />`--output-dir wow`
+* `import { Client, networks } from 'wow'`
+* `client = new Client({ ...networks.testnet })`
 
-<!--
-backgroundImage: "url(./joy/bg.webp)"
-class: joy
--->
+---
+
+![bg opacity:.9](joy/typeahead.png)
+
+# ~~2. built in programmability~~
+
+<!-- class: none -->
+
+# 3. familiar developer workflows
+
+## `network container`
+
+* no Ganache or whatever
+* local development
+* controlled environment for tests
+* snapshotting
+* in the future: UI
+
+# ~~3. familiar developer workflows~~
+
+# 4. fast project setup
+
+## `stellar contract init`
+
+# ~~4. fast project setup~~
+
+# 5. you
+
+## don't just build apps
+
+## don't just build apps,<br />build tooling!
+
+## the foundations you need
+
+1) technological
+2) community
+3) financial 
+   * Stellar Community Fund "tooling" track
+
+# got ideas?<br /> build on Stellar!
+
+# questions?
+
+1. real value, real utility
+2. built in programmability
+   - command line example
+   - app example
+3. familiar developer workflows
+4. fast project setup
+5. you
