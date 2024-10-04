@@ -3,11 +3,24 @@ headingDivider: 2
 style: |
   section {
     font-size: 2.4em;
+    font-family: Verdana;
+  }
+  section code {
+    background: rgba(255, 255, 255, 0.6);
+  }
+  section li img {
+    vertical-align: middle;
+  }
+  section a {
+    color: rgb(196, 59, 133);
   }
   section h2,
   section h1 {
     color: rgb(93, 74, 93);
     text-align: center;
+  }
+  section.big {
+    font-size: 12em;
   }
   section.top {
     justify-content: flex-start;
@@ -26,8 +39,7 @@ style: |
 
 * Chad O
   * (chadoh)
-* Cofounder, Aha Labs
-  * (and CEO?)
+* Cofounder & CEO, Aha Labs
 * prev
   * Ruby (on Rails)
   * NEAR
@@ -46,13 +58,9 @@ style: |
 
 # 😂
 
+<!-- _class: big -->
+
 <!-- this always seemed TOO happy to mean "joy" to me! -->
-
----
-
-![bg contain](joy/jesus.gif)
-
-<!-- as an evangelical kid, I was taught that joy came from putting jesus first! and that it wasn't an extreme happiness, but a more foundational state of mind / orientation toward the world / aspect of character -->
 
 ---
 
@@ -136,19 +144,15 @@ class: none
 -->
 
 1) real value, real utility
-2) built in programmability
+2) familiar developer workflows
+3) built-in programmability
    * command line example
    * app example
-3) familiar developer workflows
-4) fast project setup
-5) you
-
+4) you
 
 # 1. real value, real utility
 
 # blockchains
-
-# are they useful?
 
 # what are they good for?
 
@@ -181,17 +185,43 @@ MoneyGram, UN, etc. Actual people, real use-cases.
 If "programmable money" is the argument that makes sense of blockchain, then it helps to have real money in the system.
 -->
 
-# Stellar Asset Contract
+* MoneyGram
+* UNHCR
+* Decaf, Beans, Blend, ...
+* almost a decade of real value
+
+<!-- TODO: logos -->
 
 # ~~1. real value, real utility~~
 
-# 2. built in programmability
+# 2. familiar developer workflows
+
+
+## `stellar network container`
+
+* Horizon
+* RPC
+* Friendbot
+
+## `stellar network container`
+
+* no Ganache or whatever
+* local development
+* controlled environment for tests
+* snapshotting
+* in the future: UI
+
+# ~~2. familiar developer workflows~~
+
+# 3. built-in programmability
 
 # &nbsp;
 
 <!-- backgroundImage: none -->
 
 # ABIs
+
+## Application Binary Interfaces
 
 # ABIs published to...
 
@@ -203,141 +233,311 @@ If "programmable money" is the argument that makes sense of blockchain, then it 
 
 <!-- backgroundImage: url(joy/bg.png) -->
 
-# "contract spec"
-
-# XDR
-
-<!-- backgroundImage: none -->
-
-# "XDR spec"
-
-# "XDR"
-
-# "contract XDR spec"
-
-# "contract interface"
+# contract spec
 
 # really slick developer tools
 
-<!-- backgroundImage: url(joy/bg.png) -->
-
-## command line interface
+## example
 
 <!-- class: top -->
 
-* `stellar contract deploy ... --alias wow`
-* `stellar contract invoke --id wow -- --help`
+* `stellar contract init my-project`<br />`--with-example increment`
 
-## command line interface
+---
 
-- `stellar contract deploy ... --alias wow`
-- `stellar contract invoke --id wow -- --help`
-
-```
-transfer        Transfer `amount` from `from` to `to`.
-
-                # Arguments
-
-                * `from` - The address holding the balance of tokens which will be
-                withdrawn from.
-                * `to` - The address which will receive the transferred tokens.
-                * `amount` - The amount of tokens to be transferred.
+```rs
+/// Increment increments an internal counter, and returns the value.
+pub fn increment(env: Env) -> u32 {
+    ...
+}
 ```
 
-## command line interface
+* `stellar contract build`
 
-- `stellar contract deploy ... --alias wow`
-- `stellar contract invoke --id wow -- --help`
-- `stellar contract invoke --id wow -- transfer --help`
+---
 
-## command line interface
+```rs
+/// Increment increments an internal counter, and returns the value.
+pub fn increment(env: Env) -> u32 {
+    ...
+}
+```
 
-- `stellar contract deploy ... --alias wow`
-- `stellar contract invoke --id wow -- --help`
-- `stellar contract invoke --id wow -- transfer --help`
+- `stellar contract deploy --wasm .../increment.wasm`<br />`--alias counter`
+
+---
+
+```rs
+/// Increment increments an internal counter, and returns the value.
+pub fn increment(env: Env) -> u32 {
+    ...
+}
+```
+
+- `stellar contract invoke --id counter -- --help`
+
+---
+
+```rs
+/// Increment increments an internal counter, and returns the value.
+pub fn increment(env: Env) -> u32 {
+    ...
+}
+```
+
+- `stellar contract invoke --id counter -- --help`
 
 ```
-Usage: transfer [OPTIONS]
+Commands:
+  increment  Increment increments an internal counter, and returns the value.
+  help       Print this message or the help of the given subcommand(s)
+```
+
+* `stellar contract invoke --id counter -- increment`
+
+---
+
+
+```rs
+/// Increment increments an internal counter, and returns the value.
+pub fn increment(env: Env) -> u32 {
+    ...
+}
+```
+
+---
+
+```rs
+/// Increment counter, return new value
+pub fn increment(env: Env) -> u32 {
+    ...
+}
+```
+
+---
+
+```rs
+/// Increment counter by `by`, return new value
+pub fn increment(env: Env, by: u32) -> u32 {
+    ...
+}
+```
+
+---
+
+```rs
+/// Increment counter by `by`, return new value
+pub fn increment(env: Env, by: u32) -> u32 { ... }
+/// Get current value of counter
+pub fn get(env: Env) -> u32 { ... }
+```
+
+* `stellar contract build`
+
+---
+
+```rs
+/// Increment counter by `by`, return new value
+pub fn increment(env: Env, by: u32) -> u32 { ... }
+/// Get current value of counter
+pub fn get(env: Env) -> u32 { ... }
+```
+
+- `stellar contract deploy --wasm .../increment.wasm`<br />`--alias counter`
+
+---
+
+```rs
+/// Increment counter by `by`, return new value
+pub fn increment(env: Env, by: u32) -> u32 { ... }
+/// Get current value of counter
+pub fn get(env: Env) -> u32 { ... }
+```
+
+- `stellar contract invoke --id counter -- --help`
+
+---
+
+```rs
+/// Increment counter by `by`, return new value
+pub fn increment(env: Env, by: u32) -> u32 { ... }
+/// Get current value of counter
+pub fn get(env: Env) -> u32 { ... }
+```
+
+- `stellar contract invoke --id counter -- --help`
+
+```
+Commands:
+  increment  Increment counter by `by`, return new value
+  get        Get current value of counter
+  help       Print this message or the help of the given subcommand(s)
+```
+
+---
+
+```rs
+/// Increment counter by `by`, return new value
+pub fn increment(env: Env, by: u32) -> u32 { ... }
+```
+
+- `stellar contract invoke --id counter -- --help`
+* `stellar contract invoke --id counter -- increment`<br />`--help`
+
+---
+
+```rs
+/// Increment counter by `by`, return new value
+pub fn increment(env: Env, by: u32) -> u32 { ... }
+```
+
+- `stellar contract invoke --id counter -- increment`<br />`--help`
+
+```
+Increment counter by `by`, return new value
+
+Usage: increment [OPTIONS]
+
 Options:
-      --amount <i128>
+      --by <u32>
           Example:
-            --amount -100
-      --to <Address>
-          Can be public key (G13..), a contract hash (6c45307), or an identity (alice)
-          Example:
-            --to GDIY6AQQ75WMD4W46EYB7O6UYMHOCGQHLAQGQTKHDX4J2DYQCHVCR4W4
-      --from <Address>
-          Can be public key (G13..), a contract hash (6c45307) or an identity (alice),
-          Example:
-            --from GDIY6AQQ75WMD4W46EYB7O6UYMHOCGQHLAQGQTKHDX4J2DYQCHVCR4W4
+            --by 1
 ```
 
-## command line interface
+---
 
-- `stellar contract deploy ... --alias wow`
-- `stellar contract invoke --id wow -- --help`
-- `stellar contract invoke --id wow -- transfer --help`
-- `stellar contract invoke --id wow -- transfer`<br /> `--from alice --to bob --amount 10000000`
+```rs
+/// Increment counter by `by`, return new value
+pub fn increment(env: Env, by: u32) -> u32 { ... }
+```
+
+- `stellar contract invoke --id counter -- increment`<br />`--help`
+- `stellar contract invoke --id counter -- increment`<br />`--by 5`
+
+---
+
+```bash
+alias counter="stellar contract invoke --id counter --"
+```
+* `counter --help`
+* `counter increment --help`
+* `counter increment --by 5`
 
 ## javascript
 
-- `import { contract } from '@stellar/stellar-sdk'`
-- `client = contract.Client.from({ contractId: 'C…' })`
-- `client.transfer({`<br/>`  from: alice,`<br/>`  to: bob,`<br />`  amount: 10000000,`<br />`})`
+## javascript
+
+```js
+import { Client } from '@stellar/stellar-sdk/counter'
+```
+
+## javascript
+
+```js
+import { Client } from '@stellar/stellar-sdk/counter'
+
+const counter = Client.from({ contractId: 'C…' })
+```
+
+## javascript
+
+```js
+import { Client } from '@stellar/stellar-sdk/counter'
+
+const counter = Client.from({ contractId: 'C…' })
+
+counter.increment({ by: 5 })
+```
 
 ## typescript
 
-* `stellar contract bindings typescript --id C…`<br />`--output-dir wow`
-* `import { Client, networks } from 'wow'`
-* `client = new Client({ ...networks.testnet })`
+* `stellar contract bindings typescript --id counter`<br />`--output-dir packages/counter`
+
+## typescript
+
+- `stellar contract bindings typescript --id counter`<br />`--output-dir packages/counter`
+
+### package.json
+```json
+  "workspaces": [
+    "packages/*"
+  ],
+```
+
+## typescript
+
+- `stellar contract bindings typescript --id counter`<br />`--output-dir packages/counter`
+
+```ts
+import { Client, networks } from 'counter'
+```
+
+## typescript
+
+- `stellar contract bindings typescript --id counter`<br />`--output-dir packages/counter`
+
+```ts
+import { Client, networks } from 'counter'
+
+const counter = new Client({ ...networks.testnet })
+```
 
 ---
 
 ![bg opacity:.9](joy/typeahead.png)
 
-# ~~2. built in programmability~~
+---
+
+![bg opacity:.9](joy/typeahead2.png)
+
+# ~~3. built-in programmability~~
 
 <!-- class: none -->
 
-# 3. familiar developer workflows
+# 4. you
 
-## `network container`
+## don't just build apps<br />&nbsp;
 
-* no Ganache or whatever
-* local development
-* controlled environment for tests
-* snapshotting
-* in the future: UI
+## don't just build apps<br />build tooling!
 
-# ~~3. familiar developer workflows~~
-
-# 4. fast project setup
-
-## `stellar contract init`
-
-# ~~4. fast project setup~~
-
-# 5. you
-
-## don't just build apps
-
-## don't just build apps,<br />build tooling!
+<!-- including CLI plugins! -->
 
 ## the foundations you need
 
+<!-- class: top -->
+
 1) technological
-2) community
-3) financial 
-   * Stellar Community Fund "tooling" track
+
+* [Rust](https://github.com/stellar/stellar-cli/blob/88a8ca91a28afe0da63debb448b2d0a8060f99e5/cmd/soroban-cli/src/commands/contract/invoke.rs\#L163) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![w:200px](joy/rust-example.png)
+* [Typescript](https://github.com/stellar/js-stellar-sdk/blob/ebab1837df0a0a8ebb8e75f7878f2129f06819de/src/contract/spec.ts\#L468) ![w:200px](joy/typescript-example.png)
+
+## the foundations you need
+
+1. technological
+2. financial 
+   * Stellar Community Fund [dev tooling](https://communityfund.stellar.org/projects?name=&category=Developer%20Tooling) track
+
+     ![w:200px](joy/scf.png)
+
+## the foundations you need
+
+1. technological
+2. financial 
+3. community
+   * Okashi
+   * CommuniDAO
+   * Loam
+     * (come see me again!)
 
 # got ideas?<br /> build on Stellar!
+
+<!-- class: none -->
 
 # questions?
 
 1. real value, real utility
-2. built in programmability
+2. familiar developer workflows
+3. built-in programmability
    - command line example
    - app example
-3. familiar developer workflows
-4. fast project setup
-5. you
+4. you
