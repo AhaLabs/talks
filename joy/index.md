@@ -35,7 +35,7 @@ style: |
 
 # me
 
-![bg right](joy/chadoh.jpg)
+![bg right](img/chadoh.jpg)
 
 * Chad O
   * (chadoh)
@@ -52,7 +52,7 @@ style: |
 
 ---
 
-![bg](joy/pattern-letters.webp)
+![bg](img/pattern-letters.webp)
 
 # : j o y :
 
@@ -64,44 +64,44 @@ style: |
 
 ---
 
-![bg](joy/inside-out-joy.webp)
+![bg](img/inside-out-joy.webp)
 
 <!-- if you search for images of joy, you get a LOT of Inside Out -->
 
 ---
 
-![bg](joy/jumping.jpg)
+![bg](img/jumping.jpg)
 
 <!-- and also a lot of lens flare -->
 
 ---
 
-![bg](joy/mindful-breath.jpeg)
+![bg](img/mindful-breath.jpeg)
 
 <!-- like, a lot -->
 
 ---
 
-![bg](joy/mountaintop.jpeg)
+![bg](img/mountaintop.jpeg)
 
 <!-- so much -->
 
 ---
 
-![bg](joy/swing.webp)
+![bg](img/swing.webp)
 
 <!-- on and on -->
 
 ---
 
-![bg](joy/chatgpt.webp)
+![bg](img/chatgpt.webp)
 
 
 <!-- ChatGPT will give you lens flares, too. Why lens flares, I asked. "Lens flares are often associated with joy because they evoke the brightness and energy of sunlight, which is commonly linked to positive emotions like warmth, happiness, and freedom. Visually, lens flares can create a sense of liveliness and motion in an image, enhancing the dynamic quality of the scene. When used in moments that feature bright sunlight, the effect can highlight the carefree, radiant feeling often associated with joyful experiences, like playing outdoors, celebrations, or simply basking in a beautiful day." -->
 
 ---
 
-![bg](joy/raincoat-smile.png)
+![bg](img/raincoat-smile.png)
 
 # joy
 
@@ -134,12 +134,12 @@ _according to Merriam-Webster_
 
 - the emotion evoked by well-being, success, or good fortune or by the prospect of possessing what one desires, _delight_
 * a source or cause of delight
-* ![w:300](joy/raincoat-smile.png)
+* ![w:300](img/raincoat-smile.png)
 
 # stellar
 
 <!--
-backgroundImage: "url(./joy/bg.png)"
+backgroundImage: "url(img/bg.png)"
 class: none
 -->
 
@@ -231,7 +231,7 @@ If "programmable money" is the argument that makes sense of blockchain, then it 
 
 # bake it in
 
-<!-- backgroundImage: url(joy/bg.png) -->
+<!-- backgroundImage: url(img/bg.png) -->
 
 # contract spec
 
@@ -484,11 +484,11 @@ const counter = new Client({ ...networks.testnet })
 
 ---
 
-![bg opacity:.9](joy/typeahead.png)
+![bg opacity:.95](img/typeahead.png)
 
 ---
 
-![bg opacity:.9](joy/typeahead2.png)
+![bg opacity:.95](img/typeahead2.png)
 
 # ~~3. built-in programmability~~
 
@@ -508,8 +508,8 @@ const counter = new Client({ ...networks.testnet })
 
 1) technological
 
-* [Rust](https://github.com/stellar/stellar-cli/blob/88a8ca91a28afe0da63debb448b2d0a8060f99e5/cmd/soroban-cli/src/commands/contract/invoke.rs\#L163) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![w:200px](joy/rust-example.png)
-* [Typescript](https://github.com/stellar/js-stellar-sdk/blob/ebab1837df0a0a8ebb8e75f7878f2129f06819de/src/contract/spec.ts\#L468) ![w:200px](joy/typescript-example.png)
+* [Rust](https://github.com/stellar/stellar-cli/blob/88a8ca91a28afe0da63debb448b2d0a8060f99e5/cmd/soroban-cli/src/commands/contract/invoke.rs\#L163) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![w:200px](img/rust-example.png)
+* [Typescript](https://github.com/stellar/js-stellar-sdk/blob/ebab1837df0a0a8ebb8e75f7878f2129f06819de/src/contract/spec.ts\#L468) ![w:200px](img/typescript-example.png)
 
 ## the foundations you need
 
@@ -517,7 +517,7 @@ const counter = new Client({ ...networks.testnet })
 2. financial 
    * Stellar Community Fund [dev tooling](https://communityfund.stellar.org/projects?name=&category=Developer%20Tooling) track
 
-     ![w:200px](joy/scf.png)
+     ![w:200px](img/scf.png)
 
 ## the foundations you need
 
