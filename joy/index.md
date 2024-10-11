@@ -343,14 +343,12 @@ If "programmable money" is the argument that makes sense of blockchain, then it 
 - no Ganache or whatever
 - local development
 - controlled environment for tests
-- snapshotting
 
 ## `stellar network container`
 
 - no Ganache or whatever
 - local development
 - controlled environment for tests
-- snapshotting
 - in the future: UI
 
 # ~~2. familiar developer workflows~~
